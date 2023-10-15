@@ -9,20 +9,28 @@
     --text-white: #f5f5f5;
 }
 
+* {
+    margin: 0;
+    font-family: 'Gabarito', sans-serif;
+    color: var(--text-white);
+}
+
 body {
     background-color: var(--background-blue);
-    font-family: 'Gabarito', sans-serif;
-    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-.max-width {
-    max-width: 960px;
+ul {
+    padding: 0;
 }
 
-.margin-zero {
-    margin: 0;
+li {
+    list-style-type: none;
+}
+
+.max-width {
+    max-width: 960px;
 }
