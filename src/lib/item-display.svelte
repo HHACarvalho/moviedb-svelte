@@ -1,23 +1,25 @@
-<script lang="ts">
+<script>
     import Item from "$lib/item.svelte";
 
     export let itemArray;
 </script>
 
-<div class="movie-list">
-    {#each itemArray as movie}
-        <Item />
-    {/each}
-</div>
+<section>
+    <div class="item-list">
+        {#each itemArray as obj}
+            <Item item={obj} />
+        {/each}
+    </div>
+</section>
 
 <style>
-    .movie-list {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: flex-start;
+    .item-list {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
     }
 </style>

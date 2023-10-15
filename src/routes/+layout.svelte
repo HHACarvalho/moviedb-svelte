@@ -14,6 +14,6 @@
 
 <style>
     main {
-        margin: 0 auto 50px auto;
+        margin: 0 auto 30px auto;
     }
 </style>
