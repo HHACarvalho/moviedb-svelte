@@ -3,9 +3,9 @@
 </script>
 
 <div class="item">
-    <img class="item-poster" src="indiana3.jpg" alt={item} />
+    <img class="item-poster" src={item.poster} alt={item} />
     <div class="item-title-wrapper">
-        <p class="item-title">Indiana Jones and the Last Crusade</p>
+        <p class="item-title">{item.title}</p>
     </div>
 </div>
 
@@ -21,6 +21,10 @@
     }
 
     .item-title-wrapper {
+        height: 2.6em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 0 0 10px 10px;
         border-bottom: 5px solid var(--darker-blue);
         padding: 8px 0 6px 0;
@@ -28,10 +32,10 @@
     }
 
     .item-title {
+        max-height: 2.6em;
+        line-height: 1.3em;
         padding: 0 12px;
         text-align: center;
-        line-height: 1.3em;
-        max-height: 2.6em;
 
         display: -webkit-box;
         overflow: hidden;

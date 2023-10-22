@@ -6,9 +6,13 @@
 
 <section>
     <div class="item-list">
-        {#each itemArray as obj}
-            <Item item={obj} />
-        {/each}
+        {#if itemArray.length == 0}
+            <h1>There are no movies</h1>
+        {:else}
+            {#each itemArray as obj}
+                <Item item={obj} />
+            {/each}
+        {/if}
     </div>
 </section>
 
@@ -21,5 +25,9 @@
         justify-content: flex-start;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    h1 {
+        margin: 0 auto;
     }
 </style>
