@@ -5,7 +5,7 @@
         <li><a href="/search">Browse</a></li>
         <li><a href="/about">About</a></li>
     </ul>
-    <input type="text" placeholder="Search" />
+    <input type="text" name="query" id="query" placeholder="Search" />
 </header>
 
 <style>

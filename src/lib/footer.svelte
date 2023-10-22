@@ -5,7 +5,7 @@
 <style>
     footer {
         margin: 0 auto;
-        padding: 5px;
+        padding: 15px;
         text-align: center;
     }
 </style>
