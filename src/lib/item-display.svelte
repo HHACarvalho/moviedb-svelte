@@ -6,8 +6,8 @@
 
 <section>
     <div class="item-list">
-        {#if itemArray.length == 0}
-            <h1>There are no movies</h1>
+        {#if !itemArray.data}
+            <h1>{itemArray.message}</h1>
         {:else}
             {#each itemArray as obj}
                 <Item item={obj} />
