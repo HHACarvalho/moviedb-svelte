@@ -6,10 +6,10 @@
 
 <section>
     <div class="item-list">
-        {#if !itemArray.data}
-            <h1>{itemArray.message}</h1>
+        {#if itemArray.error}
+            <h1>{itemArray.error}</h1>
         {:else}
-            {#each itemArray as obj}
+            {#each itemArray.data as obj}
                 <Item item={obj} />
             {/each}
         {/if}

@@ -1,29 +1,20 @@
-export async function load({ fetch }) {
+export async function load() {
+    return {
+        movieArray: await fetchData("http://localhost:4000/movie/all?pageNumber=1&pageSize=10"),
+    }
+}
 
+async function fetchData(url) {
     try {
-        const res = await fetch("http://localhost:4000/movie/all?pageNumber=1&pageSize=50")
-        const resData = await res.json()
+        const res = await fetch(url)
+        const data = await res.json()
 
         if (!res.ok) {
-
-            return {
-                movieArray: {
-                    message: res.statusText + ": " + resData.msg
-                }
-            }
+            return { error: res.statusText + ": " + data.msg }
         }
 
-        return {
-            movieArray: {
-                data: resData
-            }
-        }
+        return { data: data }
     } catch (error) {
-
-        return {
-            movieArray: {
-                message: error
-            }
-        }
+        return { error: "Internal Server Error: " + error.message }
     }
 }
