@@ -3,15 +3,21 @@
 </script>
 
 <div class="item">
-    <img class="item-poster" src={item.poster} alt={item} />
-    <div class="item-title-wrapper">
-        <p class="item-title">{item.title}</p>
-    </div>
+    <a href="/title/{item.id}">
+        <img class="item-poster" src={item.poster} alt={item.id} />
+        <div class="item-title-wrapper">
+            <p class="item-title">{item.title}</p>
+        </div>
+    </a>
 </div>
 
 <style>
     .item {
         width: calc(20% - 8px);
+    }
+
+    a {
+        display: block;
     }
 
     .item-poster {
